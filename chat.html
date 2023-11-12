@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+</head>
+
+<header>
+        <img class="logo" src="imagens/logo.jpg"/>
+        <div id="titulo-cabecalho">Aesthical Life</div>
+</header>
+<body onload="escreverChat()">
+    <div class="titulo-secao">Chat</div> 
+    
+    <br>
+    <fieldset>
+        <legend>Perfil</legend>
+
+        <input type="radio" name="rdperfil" value="Ana" checked onclick="selecionarPerfil('Ana')">
+        <label for="ana">Ana</label>
+
+        <input type="radio" name="rdperfil" id="Jor" value="Jorge" onclick="selecionarPerfil('Jorge')">
+        <label for="jor">Jorge</label>
+    </fieldset>
+    <br>
+
+    <input type="text" id="texto" size="52" maxlength="50">
+    <button type="button" onclick="enviar()">Enviar</button>
+    <br><br>
+
+    <div id="div-chat"></div>
+</body>
+
+<footer> 
+    <table class="tabela-rodape">
+        <tr>
+            <td><a href="home.html" alt="home" title="home"><img class="icone-rodape" src="icones/casa.png"/></a></td>
+            <td><a href="buscar.html"alt="buscar" title="buscar"><img class="icone-rodape" src="icones/lupa.png"/></a></td>
+            <td><a href="postar.html"alt="postar" title="postar"><img class="icone-rodape" src="icones/post.png"/></a></td>
+            <td><a href="chat.html"alt="chat" title="chat"><img class="icone-rodape" src="icones/chat.png"/></a></td>
+            <td><a href="perfil.html"alt="perfil" title="perfil"><img class="icone-rodape" src="icones/usuario.png"/></a></td>
+        </tr>
+    </table>
+</footer> 
+</html>
+
+<script>
+    var perfil = "Ana";
+    var chat = ["<img src='imagens/avatar-f.jpg' class='avatar-chat'/> Ana: Oi", "<img src='imagens/avatar-m.jpg' class='avatar-chat'/> Jorge: Oi Ana"];
+
+    function escreverChat() {
+        var el = document.getElementById("div-chat");
+        el.innerHTML = "";
+
+        for(var i = 0; i < chat.length; i++) {
+            el.innerHTML = chat[i] + "<p>" + el.innerHTML + "</p>";
+        }
+    }
+
+    function enviar() {
+        var el = document.getElementById("texto");
+
+        if(el!="") {
+            // adiciona conversa na lista
+            var avatar = "<img src='imagens/avatar-f.jpg' class='avatar-chat'/>";
+            if(perfil != "Ana"){
+                avatar = "<img src='imagens/avatar-m.jpg' class='avatar-chat'/>";
+            }
+            chat.push(avatar + " " + perfil + ": " + el.value);
+
+            //chat.push(perfil + ":" + el.value);
+            el.value = "";
+
+            // chama a função de escrita do chat 
+            escreverChat();
+        }
+    }
+
+    function selecionarPerfil(novoPerfil) {
+        perfil = novoPerfil;
+    }
+</script>

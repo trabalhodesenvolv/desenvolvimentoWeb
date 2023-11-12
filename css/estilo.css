@@ -1,0 +1,125 @@
+FOOTER { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100vw; 
+    z-index: 10;
+    padding: 4px;
+    background-color: lightskyblue;
+    text-align: center;
+
+    .lista-footer li{
+        display: inline;
+    }
+}
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.avatar {
+    height: 120px;
+    width: 120px;
+    border-radius: 70px;
+}
+
+.avatar-home {
+    height: 80px;
+    width: 80px;
+    border-radius: 70px;
+}
+.titulo-secao {
+    background-image:linear-gradient(to right, lightskyblue , white);
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+}
+
+HEADER {
+    /* border-bottom: solid 1px dodgerblue; */
+    text-align: center;
+    padding-top: 5px;
+    /* background-image: linear-gradient(to right, green , white); */
+    
+    
+}
+
+BODY {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px !important;
+    padding: 0px !important;
+    height: 100vh; 
+    padding: 0;
+}
+
+#titulo-cabecalho {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+#lista-perfil-busca {
+    background-color: blanchedalmond;
+    width: 30%;
+}
+
+#lista-perfil-busca TD {
+    background-color: beige;
+    width: 30%;
+}
+
+#div-chat {
+    border: solid 1px rgb(212, 146, 146);
+    width: 50%;
+}
+
+/* perfil */
+#tabela-perfil {
+    margin-left: auto;  /* centralizar tabela */
+    margin-right: auto; /* centralizar tabela */
+  
+    width: 50%;
+    text-align: center;
+    border: solid 1px red;
+    th {
+        border: solid 1px blue;
+    }
+    tr {
+        border: solid 1px orange;
+        td {
+            border: solid 1px green;
+        }
+    }
+}
+
+#tabela-home {
+    /*margin-left: auto;    */
+    /*margin-right: auto;  */
+    width: 100%;
+    /* text-align: center; */
+}
+#tabela-home TD {
+    border-bottom: dotted 1px silver;
+
+}
+.icone-rodape{
+	/*border: solid 1px red;*/
+	padding: 1px;
+	width: 18px;
+}
+
+.tabela-rodape{
+	margin-left: auto; 	/* center */
+	margin-right: auto;	/* center */
+	color: #5a5a5a;
+	text-align: center;
+}
+.tabela-rodape td{
+	min-width: 40px;
+}
+
+.avatar-chat{
+    width: 24px;
+    border-radius: 50px;
+}
+
